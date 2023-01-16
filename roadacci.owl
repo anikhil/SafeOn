@@ -1,0 +1,1032 @@
+Prefix: : <http://www.gosemantic.com/ontologies/roadaccident.owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.gosemantic.com/ontologies/roadaccident.owl>
+<http://www.gosemantic.com/ontologies/roadaccident.owl/1.0.0>
+
+Annotations: 
+    About "Road Accident Analysis"@en,
+    rdfs:label "Developed by Gosemantic private Limited"@en,
+    owl:versionInfo "1.0.0"@en
+
+AnnotationProperty: About
+
+    SubPropertyOf: 
+        rdfs:label
+    
+    
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:dateTime
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://www.gosemantic.com/ontologies/roadaccident.owl#hasDriver'sLicence>
+
+    Domain: 
+        Driver
+    
+    Range: 
+        <http://www.gosemantic.com/ontologies/roadaccident.owl#Driver'sLicense>
+    
+    
+ObjectProperty: Investigate
+
+    Domain: 
+        PoliceStation
+    
+    Range: 
+        RoadAccident
+    
+    
+ObjectProperty: hasInsuranceID
+
+    Domain: 
+        Victim
+    
+    Range: 
+        InsuranceId
+    
+    
+ObjectProperty: hasManufacturer
+
+    Domain: 
+        hasManufacturer some VehicleManufacturer
+    
+    
+ObjectProperty: hasTreatmentProvider
+
+    Domain: 
+        Treatment
+    
+    Range: 
+        GovernmentHospital or PrivateHospital
+    
+    
+ObjectProperty: hasVehicleManufacturer
+
+    Domain: 
+        MotorisedVehicle
+    
+    Range: 
+        VehicleManufacturer
+    
+    
+ObjectProperty: hasVehicleType
+
+    Domain: 
+        Victim
+    
+    Range: 
+        Vehicle
+    
+    
+ObjectProperty: involves
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        Person
+    
+    
+ObjectProperty: occuredOnRoad
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        Road
+    
+    
+ObjectProperty: providedBy
+
+    Domain: 
+        InsuranceId
+    
+    Range: 
+        InsuranceProvider
+    
+    
+ObjectProperty: providesTreatment
+
+    Domain: 
+        GovernmentHospital or PrivateHospital
+    
+    Range: 
+        Treatment
+    
+    
+ObjectProperty: sufferedTypeOfCasualities
+
+    Domain: 
+        Accused or Victim
+    
+    Range: 
+        Casualities
+    
+    
+DataProperty: atTime
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasAccidentDescription
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasAccidentLatitude
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasAccidentLongitude
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasAccidentSeverityLevel
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasAccidentType
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasAge
+
+    Domain: 
+        Person
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasCauseOfAccident
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasEventDate
+
+    Domain: 
+        Event
+    
+    Range: 
+        xsd:dateTime
+    
+    
+DataProperty: hasEventDateAndTime
+
+    Domain: 
+        Event
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasInsuranceProviderName
+
+    Domain: 
+        InsuranceProvider
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasInusrance
+
+    Domain: 
+        MotorisedVehicle
+    
+    Range: 
+        xsd:boolean
+    
+    
+DataProperty: hasMake
+
+    Domain: 
+        MotorisedVehicle
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasModel
+
+    Domain: 
+        MotorisedVehicle
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasNearestPoliceStation
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasNo.OfVictim
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:integer
+    
+    
+DataProperty: hasNonSafetyCondition
+
+    Domain: 
+        Victim
+    
+    Range: 
+        {"AllGateNotClosedproperly" , "Distracted" , "Drunked" , "OverSpeeding" , "PassengerSeatBeltOFFwhenPassengerSeated" , "TalkingOnPhone" , "driverSeatBeltOFF" , "notPhysicallyFit"}
+    
+    
+DataProperty: hasRegistrationNumber
+
+    Domain: 
+        MotorisedVehicle
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasRoadAccidentLocation
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasRoadCategory
+
+    Domain: 
+        Road
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasRoadDivider
+
+    Domain: 
+        Road
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasRoadName
+
+    Domain: 
+        Road
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasRoadType
+
+    Domain: 
+        Road
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasSafetyCondition
+
+    Domain: 
+        Victim
+    
+    Range: 
+        {"AllGateClosedproperly" , "NotOverSpeeding" , "PassengerSeatBeltOn" , "driverSeatBeltOn" , "notTalkingOnPhone"}
+    
+    
+DataProperty: hasSex
+
+    Domain: 
+        Person
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasVehicleAge
+
+    Domain: 
+        Vehicle
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hasVehicleManufacturerName
+
+    Domain: 
+        Vehicle
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: hascollisionSpot
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: occuredAtAddress
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: occuredAtPlace
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: occuredOnDaysOfTheWeek
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        {"Friday" , "Monday" , "Saturday" , "Sunday" , "Thursday" , "Tuesday" , "Weekdays" , "Weekend" , "wednesday"}
+    
+    
+DataProperty: occuredOnHoliday
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:boolean
+    
+    
+DataProperty: onDate
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: reportedToPolice
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: weatherCondition
+
+    Domain: 
+        RoadAccident
+    
+    Range: 
+        {"Cloudy" , "HeavyRain" , "Rainy" , "Sunny" , "Thundering" , "snowing"}
+    
+    
+Class: <http://www.gosemantic.com/ontologies/roadaccident.owl#2-AxleHeavyGoodsVehicle>
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: <http://www.gosemantic.com/ontologies/roadaccident.owl#2Wheeler>
+
+    SubClassOf: 
+        NonMotorisedVehicle
+    
+    
+Class: <http://www.gosemantic.com/ontologies/roadaccident.owl#2wheelVehicle>
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: <http://www.gosemantic.com/ontologies/roadaccident.owl#3Wheeler>
+
+    SubClassOf: 
+        NonMotorisedVehicle
+    
+    
+Class: <http://www.gosemantic.com/ontologies/roadaccident.owl#4WheelVehicle>
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: <http://www.gosemantic.com/ontologies/roadaccident.owl#4Wheeler>
+
+    SubClassOf: 
+        NonMotorisedVehicle
+    
+    
+Class: <http://www.gosemantic.com/ontologies/roadaccident.owl#Driver'sLicense>
+
+    SubClassOf: 
+        OfficialDocument
+    
+    
+Class: Aadhar
+
+    SubClassOf: 
+        OfficialDocument
+    
+    
+Class: AccidentExaminer
+
+    Annotations: 
+        rdfs:isDefinedBy "A police officer or Goverment body who invetigated the accident spot and prepares the report for FIR or any future claims"^^xsd:string
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: Accused
+
+    Annotations: 
+        rdfs:isDefinedBy "The Person responsible for accident"^^xsd:string
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: Casualities
+
+    Annotations: 
+        About "a fatal injury is one which causes death less than 30 days after the accident;
+a fatal accident is an accident in which at least one person is fatally injured;
+a serious injury is one which does not cause death less than 30 days after the accident, and which is in one (or more) of the following categories:"
+    
+    
+Class: ClaimOfficer
+
+    Annotations: 
+        rdfs:isDefinedBy "A person who approves the claim field by Insurer in case of Accident"^^xsd:string
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: Country
+
+    SubClassOf: 
+        Place
+    
+    
+Class: DamageReporterWorkshop
+
+    Annotations: 
+        rdfs:isDefinedBy "A person at Repair workshop who reported the actual damage to the Vehicle"^^xsd:string
+    
+    SubClassOf: 
+        Person
+    
+    
+Class: District
+
+    SubClassOf: 
+        State
+    
+    
+Class: Driver
+
+    SubClassOf: 
+        Victim
+    
+    
+Class: Event
+
+    Annotations: 
+        rdfs:isDefinedBy "An Event is an abstract happening of things at a particular time"^^xsd:string
+    
+    
+Class: Government
+
+    SubClassOf: 
+        Organisation
+    
+    
+Class: GovernmentHospital
+
+    SubClassOf: 
+        Government
+    
+    
+Class: HeavyGoodsVehicleTruck
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: InformedToPolice
+
+    SubClassOf: 
+        Event
+    
+    
+Class: InsuranceId
+
+    Annotations: 
+        About "Insurance is a means of protection from financial loss. It is a form of risk management, primarily used to hedge against the risk of a contingent or uncertain loss. An entity which provides insurance is known as an insurer, an insurance company, an insurance carrier or an underwriter. A person or entity who buys insurance is known as a policyholder, while a person or entity covered under the policy is called an insured. Policyholder and insured are often used as but are not necessarily synonyms, as coverage can sometimes extend to additional insureds who did not buy the insurance. The insurance transaction involves the policyholder assuming a guaranteed, known, and relatively small loss in the form of payment (premium, deductible) to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms. Furthermore, it usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship. The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured, or their designated beneficiary or assignee. The amount of money charged by the insurer to the policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. A mandatory out-of-pocket expense required by an insurance policy before an insurer will pay a claim is called a deductible (or if required by a health insurance policy, a copayment). The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risks, especially if the primary insurer deems the risk too large for it to carry. (en)"
+    
+    SubClassOf: 
+        OfficialDocument
+    
+    
+Class: InsuranceProvider
+
+    SubClassOf: 
+        Non-Government
+    
+    
+Class: LightGoodsVehicle
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: MilitaryTruck
+
+    SubClassOf: 
+        <http://www.gosemantic.com/ontologies/roadaccident.owl#4WheelVehicle>
+    
+    
+Class: MotorisedVehicle
+
+    Annotations: 
+        rdfs:isDefinedBy "A vehicle having VIN or Registration Number"^^xsd:string
+    
+    SubClassOf: 
+        Vehicle
+    
+    
+Class: MultiAxleHeavyGoodsvehicle
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: Non-Government
+
+    SubClassOf: 
+        Organisation
+    
+    
+Class: NonMotorisedVehicle
+
+    SubClassOf: 
+        Vehicle
+    
+    
+Class: OfficialDocument
+
+    
+Class: Organisation
+
+    
+Class: Passanger
+
+    SubClassOf: 
+        Victim
+    
+    
+Class: Pedestrian
+
+    SubClassOf: 
+        Victim
+    
+    
+Class: Person
+
+    
+Class: Place
+
+    Annotations: 
+        rdfs:isDefinedBy "A place where Accident Occured"^^xsd:string
+    
+    
+Class: PoliceStation
+
+    SubClassOf: 
+        Government
+    
+    
+Class: PrivateHospital
+
+    SubClassOf: 
+        Non-Government
+    
+    
+Class: ReportedTheAccident
+
+    SubClassOf: 
+        Event
+    
+    
+Class: ReportedTheDamage
+
+    SubClassOf: 
+        Event
+    
+    
+Class: ReportedToHospital
+
+    SubClassOf: 
+        Event
+    
+    
+Class: Road
+
+    Annotations: 
+        About "A road is a linear way for the conveyance of traffic that mostly has an improved surface for use by vehicles (motorized and non-motorized) and pedestrians."
+    
+    
+Class: RoadAccident
+
+    Annotations: 
+        About "A traffic accident is defined as an accident involving at least one vehicle on a road open to public traffic in which at least one person is injured or killed.
+
+Note
+Accidents involving bodily injury are defined by the order of 27 March 2007 relating to the conditions for compiling statistics on accidents involving bodily injury."
+    
+    SubClassOf: 
+        Event
+    
+    
+Class: SUV
+
+    SubClassOf: 
+        <http://www.gosemantic.com/ontologies/roadaccident.owl#4WheelVehicle>
+    
+    
+Class: Sedan
+
+    SubClassOf: 
+        <http://www.gosemantic.com/ontologies/roadaccident.owl#4WheelVehicle>
+    
+    
+Class: State
+
+    SubClassOf: 
+        Country
+    
+    
+Class: Tampoo
+
+    SubClassOf: 
+        ThreeWheelVehicle
+    
+    
+Class: Tanker
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: ThreeWheelVehicle
+
+    SubClassOf: 
+        MotorisedVehicle
+    
+    
+Class: Tractor
+
+    SubClassOf: 
+        <http://www.gosemantic.com/ontologies/roadaccident.owl#4WheelVehicle>
+    
+    
+Class: Treatment
+
+    Annotations: 
+        rdfs:isDefinedBy "The Type of Treatment provided to the Paitent like First-Aid , Major surgery etc"
+    
+    
+Class: UnknownVictim
+
+    Annotations: 
+        rdfs:isDefinedBy "Accident occured but no victim reported."^^xsd:string
+    
+    SubClassOf: 
+        Victim
+    
+    
+Class: Vehicle
+
+    
+Class: VehicleManufacturer
+
+    SubClassOf: 
+        Non-Government
+    
+    
+Class: Victim
+
+    SubClassOf: 
+        Person
+    
+    
+Individual: <http://www.gosemantic.com/ontologies/roadaccident.owl#'Delhi_heart_&_lung_institute_Super_Speciality_Hospital'>
+
+    Types: 
+        PrivateHospital
+    
+    
+Individual: <http://www.gosemantic.com/ontologies/roadaccident.owl#'Euro_NCAP'>
+
+    Types: 
+        VehicleManufacturer
+    
+    
+Individual: <http://www.gosemantic.com/ontologies/roadaccident.owl#'Mercedes_GLC'>
+
+    Types: 
+        <http://www.gosemantic.com/ontologies/roadaccident.owl#4WheelVehicle>
+    
+    
+Individual: ABC-90920293
+
+    Types: 
+        Aadhar
+    
+    
+Individual: AIIMS-Delhi
+
+    Types: 
+        GovernmentHospital
+    
+    
+Individual: AnandKumar
+
+    Types: 
+        ClaimOfficer
+    
+    
+Individual: Anand_Parbat_Police_Station
+
+    Types: 
+        PoliceStation
+    
+    
+Individual: Chandani_Mahal_Police_Station
+
+    Types: 
+        PoliceStation
+    
+    Facts:  
+     Investigate  RA-EXAMPLE-1
+    
+    
+Individual: CyrusMistry
+
+    Facts:  
+     sufferedTypeOfCasualities  Killed,
+     hasNonSafetyCondition  "OverSpeeding"^^xsd:string,
+     hasNonSafetyCondition  "PassengerSeatBeltOFFwhenPassengerSeated"^^xsd:string
+    
+    
+Individual: DL-983833838
+
+    Types: 
+        <http://www.gosemantic.com/ontologies/roadaccident.owl#Driver'sLicense>
+    
+    
+Individual: FirstAid
+
+    Types: 
+        Treatment
+    
+    
+Individual: INCID-2029202
+
+    Types: 
+        InsuranceId
+    
+    Facts:  
+     providedBy  TATA-AIG
+    
+    
+Individual: Jama_Masjid_Police_Station
+
+    Types: 
+        PoliceStation
+    
+    
+Individual: Jhonson
+
+    Types: 
+        DamageReporterWorkshop
+    
+    
+Individual: Killed
+
+    Types: 
+        Casualities
+    
+    
+Individual: Mahindra_XUV700
+
+    Types: 
+        SUV
+    
+    Facts:  
+     hasMake  "Make-hybrid-eng-2292"^^xsd:string,
+     hasModel  "Model-Engine-2992292"^^xsd:string,
+     hasRegistrationNumber  "VIN-92992932923"^^xsd:string,
+     hasVehicleAge  "3 Yrs."^^xsd:string,
+     hasVehicleManufacturerName  "Mahindra"^^xsd:string
+    
+    
+Individual: MajorInjury
+
+    Types: 
+        Casualities
+    
+    
+Individual: MinorInjury
+
+    Types: 
+        Casualities
+    
+    
+Individual: Nabi_Karim_Police_Station
+
+    Types: 
+        PoliceStation
+    
+    
+Individual: No
+
+    Types: 
+        InformedToPolice,
+        ReportedTheAccident,
+        ReportedTheDamage,
+        ReportedToHospital
+    
+    
+Individual: NoInjury
+
+    Types: 
+        Casualities
+    
+    
+Individual: PoliceOfficer-1
+
+    Types: 
+        AccidentExaminer
+    
+    
+Individual: RA-DEL-888
+
+    Types: 
+        RoadAccident
+    
+    Facts:  
+     involves  CyrusMistry,
+     hasAccidentDescription  "Former Tata Sons chairman Cyrus Mistry (54) and his co-passenger killed in a tragic car accident on Sunday were not wearing seat belts as per the preliminary probe, said a police officer. The vehicle was overspeeding and the driver lost control of the car while trying to overtake from the left side. 
+
+As per the primary investigation, the group of 4 â€“ Cyrus Mistry, his friend and co-passenger Jahangir Pandole, Jehangirâ€™s brother Darius and his wife Anahita, were travelling in their Mercedes-Benz GLC when their car, driven by Anahita, hit the railing of a bridge over the Surya river at Charoti in Palgar district around 3:15 pm."^^xsd:string,
+     occuredAtAddress  "Mumbai-Ahmedabad highway, is 43 km from Palghar in Maharashtra and about 150 km from Mumbai."^^xsd:string,
+     occuredOnDaysOfTheWeek  "Sunday"^^xsd:string,
+     onDate  "4th Sep"^^xsd:string,
+     weatherCondition  "Sunny"^^xsd:string
+    
+    
+Individual: RA-EXAMPLE-1
+
+    Types: 
+        RoadAccident
+    
+    Facts:  
+     involves  Victim-1,
+     hasAccidentDescription  "A middle aged woman in drunked state hit the divider near chandni chawk at around 10:30 PM sunday Night on 11th Sept 2022"^^xsd:string,
+     hasRoadAccidentLocation  "chandini chawk"^^xsd:string,
+     occuredAtAddress  "Chandni Chawk gali no 101 near market plaza"^^xsd:string,
+     occuredOnDaysOfTheWeek  "Monday"^^xsd:string,
+     reportedToPolice  "Yes"^^xsd:string,
+     weatherCondition  "Rainy"^^xsd:string
+    
+    
+Individual: TAR-Road
+
+    Types: 
+        Road
+    
+    
+Individual: TATA
+
+    Types: 
+        VehicleManufacturer
+    
+    
+Individual: TATA-AIG
+
+    Types: 
+        InsuranceProvider
+    
+    
+Individual: Victim-1
+
+    Types: 
+        Victim
+    
+    Facts:  
+     hasInsuranceID  INCID-2029202,
+     <http://www.gosemantic.com/ontologies/roadaccident.owl#hasDriver'sLicence>  DL-983833838,
+     hasAge  "35 Yrs."^^xsd:string,
+     hasNonSafetyCondition  "Drunked"^^xsd:string,
+     hasNonSafetyCondition  "driverSeatBeltOFF"^^xsd:string,
+     hasSex  "Female"^^xsd:string
+    
+    
+Individual: Yes
+
+    Types: 
+        InformedToPolice,
+        ReportedTheAccident,
+        ReportedTheDamage,
+        ReportedToHospital
+    
+    
+DisjointClasses: 
+    MilitaryTruck,SUV,Sedan,Tanker,Tractor
